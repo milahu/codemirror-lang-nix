@@ -4,12 +4,19 @@
 
 ### Usage
 
+```sh
+git submodule add https://github.com/milahu/codemirror-lang-nix src/codemirror-lang-nix
+git commit -m "add submodule src/codemirror-lang-nix"
+```
+
 ```js
+// src/index.js
+
 import { EditorState } from '@codemirror/state';
 import { EditorView } from '@codemirror/view';
 import { basicSetup } from 'codemirror';
 
-import { nix } from "codemirror-lang-nix";
+import { nix } from "./codemirror-lang-nix";
 
 const nixSource = `\
 { pkgs ? import <nixpkgs> {} }:
