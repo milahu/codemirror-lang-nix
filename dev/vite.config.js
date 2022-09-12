@@ -1,5 +1,5 @@
-const assetsDir = 'assets/';
-//const assetsDir = '';
+const assetsDir = '';
+//const assetsDir = 'assets/';
 
 const outputDefaults = {
   format: 'iife',
