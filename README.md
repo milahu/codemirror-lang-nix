@@ -2,6 +2,10 @@
 
 [CodeMirror](https://codemirror.net/) extension for the [Nix](https://github.com/NixOS/nix) language
 
+### Demo
+
+[Live Demo](https://milahu.github.io/codemirror-lang-nix/dev/dist/)
+
 ### Usage
 
 ```sh
