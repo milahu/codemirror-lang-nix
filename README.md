@@ -1,6 +1,6 @@
 # codemirror-lang-nix
 
-CodeMirror extension for the [Nix](https://github.com/NixOS/nix) language
+[CodeMirror](https://codemirror.net/) extension for the [Nix](https://github.com/NixOS/nix) language
 
 ### Usage
 
