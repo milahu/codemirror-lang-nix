@@ -8,10 +8,10 @@
   },
   "type": "module",
   "exports": {
-    "import": "./src/index.js"
+    "import": "./dist/index.js"
   },
   "types": "src/index.d.ts",
-  "module": "src/index.js",
+  "module": "dist/index.js",
   "sideEffects": false,
   "license": "MIT",
   "scripts": {
