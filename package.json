@@ -16,7 +16,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "npm run build && vite ./dev",
-    "build": "cm-buildhelper src/index.ts",
+    "build": "cm-buildhelper src/index.js",
     "test": "cm-runtests",
     "publish": "npm run build && npm publish"
   },
