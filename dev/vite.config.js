@@ -13,6 +13,7 @@ const outputDefaults = {
 export default {
   plugins: [],
   root: "dev",
+  base: "./",
   server: {
     host: 'localhost',
     hmr: {
