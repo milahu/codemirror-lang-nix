@@ -44,5 +44,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/replit/codemirror-lang-nix.git"
+  },
+  "dependencies": {
+    "sucrase": "^3.25.0",
+    "tiny-glob": "^0.2.9"
   }
 }
