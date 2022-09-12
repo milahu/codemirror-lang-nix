@@ -1,4 +1,4 @@
-# codemirror-lang-nix
+# codemirror-lang-nix <img align="right" src="dev/nix-snowflake.svg" width="64">
 
 [CodeMirror](https://codemirror.net/) extension for the [Nix](https://github.com/NixOS/nix) language
 
