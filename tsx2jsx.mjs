@@ -68,7 +68,7 @@ if (gitDirty != '') {
 
 const todoTransform = [];
 //for (const fi of await glob('./src/**/*.tsx')) { // convert all files in src/ folder
-for (const fi of await glob('./**/*.tsx')) { // convert all files in workdir
+for (const fi of await glob('./**/*.ts')) { // convert all files in workdir
   const fo = fi.slice(0, -4) + '.jsx';
   console.log(`rename: ${fi} -> ${fo}`);
   spawnSync('git', ['mv', '-v', fi, fo]); // rename
