@@ -1,4 +1,4 @@
-import { ExternalTokenizer, ContextTracker } from "@lezer/lr";
+import { ExternalTokenizer, } from "@lezer/lr";
 import {
   strContent,
   indStrContent,

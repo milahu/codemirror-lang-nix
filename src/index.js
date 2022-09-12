@@ -13,7 +13,7 @@ import {
   completeFromList,
   ifNotIn,
   snippetCompletion as snip,
-  Completion,
+
 } from "@codemirror/autocomplete";
 
 export const parser = nixParser;
@@ -65,7 +65,7 @@ export const nixLanguage = LRLanguage.define({
   },
 });
 
-const snippets: readonly Completion[] = [
+const snippets = [
   snip("let ${binds} in ${expression}", {
     label: "let",
     detail: "Let ... in statement",
