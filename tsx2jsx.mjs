@@ -86,6 +86,10 @@ for (const fi of await glob(globStr)) {
   //console.log(fi); continue; // debug
 
   const fiParts = fi.split('.');
+  if (fiParts.slice(-2)[0] == 'd') {
+    console.log(`skip .d.ts file: ${fi}`);
+    continue;
+  }
   const fiExt = fiParts.slice(-1)[0];
   const foExt = foExtMap[fiExt];
   if (!foExt) {
