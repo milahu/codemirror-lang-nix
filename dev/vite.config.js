@@ -2,9 +2,9 @@ export default {
   plugins: [],
   root: "dev",
   server: {
-    host: '0.0.0.0',
+    host: 'localhost',
     hmr: {
-      port: 443,
+      //port: 443,
     }
   }
 }
