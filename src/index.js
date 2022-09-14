@@ -1,4 +1,3 @@
-//import { parser as nixParser } from "./syntax.grammar";
 import { parser as nixParser } from "./lezer-parser-nix/src/nix.grammar";
 
 import {
@@ -10,12 +9,13 @@ import {
   delimitedIndent,
   continuedIndent,
 } from "@codemirror/language";
+
 import { styleTags, tags as t } from "@lezer/highlight";
+
 import {
   completeFromList,
   ifNotIn,
   snippetCompletion as snip,
-
 } from "@codemirror/autocomplete";
 
 export const parser = nixParser;
@@ -24,7 +24,7 @@ export const nixLanguage = LRLanguage.define({
   parser: parser.configure({
     props: [
       indentNodeProp.add({
-        Parenthesized: delimitedIndent({ closing: ")" }),
+        Parens: delimitedIndent({ closing: ")" }),
         AttrSet: delimitedIndent({ closing: "}" }),
         List: delimitedIndent({ closing: "]" }),
         Let: continuedIndent({ except: /^\s*in\b/ }),
@@ -41,16 +41,17 @@ export const nixLanguage = LRLanguage.define({
       }),
       styleTags({
         Identifier: t.propertyName,
-        Boolean: t.bool,
+        TRUE: t.bool,
+        FALSE: t.bool,
         String: t.string,
         IndentedString: t.string,
-        LineComment: t.lineComment,
-        BlockComment: t.blockComment,
+        Comment: t.lineComment,
+        CommentBlock: t.blockComment,
         Float: t.float,
         Integer: t.integer,
-        Null: t.null,
+        NULL: t.null,
         URI: t.url,
-        SPath: t.literal,
+        //SPath: t.literal, // TODO what is stringpath?
         Path: t.literal,
         "( )": t.paren,
         "{ }": t.brace,
@@ -85,7 +86,7 @@ export function nix() {
     nixLanguage,
     nixLanguage.data.of({
       autocomplete: ifNotIn(
-        ["LineComment", "BlockComment", "String", "IndentedString"],
+        ["Comment", "CommentBlock", "String", "IndentedString"],
         completeFromList(snippets)
       ),
     })
