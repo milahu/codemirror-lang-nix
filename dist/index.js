@@ -139,14 +139,13 @@ const nixLanguage = /*@__PURE__*/LRLanguage.define({
         StringContent: tags.string,
         IndentedString: tags.string,
         IndentedStringContent: tags.string,
-        StringBlockContent: tags.string, // FIXME rename
         Comment: tags.lineComment,
         CommentBlock: tags.blockComment,
         Float: tags.float,
         Integer: tags.integer,
         NULL: tags.null,
         URI: tags.url,
-        //SPath: t.literal, // TODO what is stringpath?
+        //SPath: t.literal, // TODO what is stringpath? not implemented in nix.grammar
         Path: tags.literal,
         "( )": tags.paren,
         "{ }": tags.brace,
