@@ -167,14 +167,14 @@ const nixLanguage = language.LRLanguage.define({
 });
 
 const snippets = [
-  autocomplete.snippetCompletion("let ${binds} in ${expression}", {
+  autocomplete.snippetCompletion("let ${binds} in ${expr}", {
     label: "let",
-    detail: "Let ... in statement",
+    detail: "Let a=1; in a",
     type: "keyword",
   }),
-  autocomplete.snippetCompletion("with ${expression}; ${expression}", {
+  autocomplete.snippetCompletion("with ${expr1}; ${expr2}", {
     label: "with",
-    detail: "With statement",
+    detail: "With a; b",
     type: "keyword",
   }),
 ];

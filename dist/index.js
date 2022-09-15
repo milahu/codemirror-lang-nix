@@ -163,14 +163,14 @@ const nixLanguage = /*@__PURE__*/LRLanguage.define({
 });
 
 const snippets = [
-  /*@__PURE__*/snippetCompletion("let ${binds} in ${expression}", {
+  /*@__PURE__*/snippetCompletion("let ${binds} in ${expr}", {
     label: "let",
-    detail: "Let ... in statement",
+    detail: "Let a=1; in a",
     type: "keyword",
   }),
-  /*@__PURE__*/snippetCompletion("with ${expression}; ${expression}", {
+  /*@__PURE__*/snippetCompletion("with ${expr1}; ${expr2}", {
     label: "with",
-    detail: "With statement",
+    detail: "With a; b",
     type: "keyword",
   }),
 ];
