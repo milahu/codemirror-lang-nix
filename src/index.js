@@ -71,14 +71,14 @@ export const nixLanguage = LRLanguage.define({
 });
 
 const snippets = [
-  snip("let ${binds} in ${expression}", {
+  snip("let ${binds} in ${expr}", {
     label: "let",
-    detail: "Let ... in statement",
+    detail: "Let a=1; in a",
     type: "keyword",
   }),
-  snip("with ${expression}; ${expression}", {
+  snip("with ${expr1}; ${expr2}", {
     label: "with",
-    detail: "With statement",
+    detail: "With a; b",
     type: "keyword",
   }),
 ];
