@@ -24,8 +24,6 @@
   "peerDependencies": {
     "@codemirror/autocomplete": "^6.0.0",
     "@codemirror/language": "^6.2.1",
-    "@codemirror/state": "^6.1.1",
-    "@codemirror/view": "^6.0.0",
     "@lezer/common": "^1.0.0",
     "@lezer/highlight": "^1.0.0",
     "@lezer/lr": "^1.0.0"
@@ -33,9 +31,7 @@
   "devDependencies": {
     "@codemirror/buildhelper": "^0.1.16",
     "@codemirror/language": "^6.2.1",
-    "@codemirror/state": "^6.1.1",
     "@codemirror/theme-one-dark": "^6.1.0",
-    "@codemirror/view": "6.2.3",
     "@lezer/generator": "^1.1.1",
     "@lezer/lr": "^1.2.3",
     "codemirror": "^6.0.1",
