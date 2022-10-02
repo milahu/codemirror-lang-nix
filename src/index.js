@@ -12,12 +12,6 @@ import {
 
 import { styleTags, tags as t } from "@lezer/highlight";
 
-import {
-  completeFromList,
-  ifNotIn,
-  snippetCompletion as snip,
-} from "@codemirror/autocomplete";
-
 export const parser = nixParser;
 
 export const nixLanguage = LRLanguage.define({
@@ -70,27 +64,11 @@ export const nixLanguage = LRLanguage.define({
   },
 });
 
-const snippets = [
-  snip("let ${binds} in ${expr}", {
-    label: "let",
-    detail: "let a=1; in a",
-    type: "keyword",
-  }),
-  snip("with ${expr1}; ${expr2}", {
-    label: "with",
-    detail: "with a; b",
-    type: "keyword",
-  }),
-];
-
-export function nix() {
+export function nix(options) {
+  if (!options) options = {};
+  if (!options.data) options.data = {};
   return new LanguageSupport(
     nixLanguage,
-    nixLanguage.data.of({
-      autocomplete: ifNotIn(
-        ["Comment", "CommentBlock", "String", "IndentedString"],
-        completeFromList(snippets)
-      ),
-    })
+    nixLanguage.data.of(options.data),
   );
 }
