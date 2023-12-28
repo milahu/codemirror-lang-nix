@@ -25,7 +25,6 @@
     "@codemirror/autocomplete": "^6.0.0",
     "@codemirror/language": "^6.2.1",
     "@lezer/common": "^1.0.0",
-    "@lezer/highlight": "^1.0.0",
     "@lezer/lr": "^1.0.0"
   },
   "devDependencies": {
