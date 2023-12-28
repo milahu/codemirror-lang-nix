@@ -1,7 +1,8 @@
 import { EditorState } from '@codemirror/state';
 import { EditorView } from '@codemirror/view';
 import { basicSetup } from 'codemirror';
-import { nix, parser } from "../dist/";
+import { nix } from "../dist/";
+import { parser } from "lezer-parser-nix";
 import { printTree } from "./print-lezer-tree";
 import { oneDark } from '@codemirror/theme-one-dark';
 

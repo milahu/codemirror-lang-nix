@@ -1,4 +1,4 @@
-import { parser as nixParser } from "lezer-parser-nix";
+import { parser } from "lezer-parser-nix";
 
 import {
   LRLanguage,
@@ -11,8 +11,6 @@ import {
 } from "@codemirror/language";
 
 import { styleTags, tags as t } from "@lezer/highlight";
-
-export const parser = nixParser;
 
 export const nixLanguage = LRLanguage.define({
   parser: parser.configure({
