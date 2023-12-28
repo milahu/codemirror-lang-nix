@@ -17,6 +17,7 @@
   "scripts": {
     "dev": "npm run build && vite ./dev",
     "devbuild": "vite build ./dev",
+    "devserve": "vite serve --clearScreen false ./dev",
     "build": "cm-buildhelper src/index.js",
     "test": "cm-runtests",
     "publish": "npm run build && npm publish"
