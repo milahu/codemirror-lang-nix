@@ -40,5 +40,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/milahu/codemirror-lang-nix"
+  },
+  "dependencies": {
+    "lezer-parser-nix": "github:milahu/lezer-parser-nix"
   }
 }

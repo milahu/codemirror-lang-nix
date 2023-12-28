@@ -1,4 +1,4 @@
-import { parser as nixParser } from "./lezer-parser-nix/src/nix.grammar";
+import { parser as nixParser } from "lezer-parser-nix";
 
 import {
   LRLanguage,
