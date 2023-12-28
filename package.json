@@ -22,6 +22,12 @@
     "test": "cm-runtests",
     "publish": "npm run build && npm publish"
   },
+  "pnpm": {
+    "overrides_comment": "not working: fix: Uncaught Error: Unrecognized extension value in extension set ([object Object]).",
+    "overrides": {
+      "@codemirror/state": "^6.4.0"
+    }
+  },
   "devDependencies": {
     "@codemirror/buildhelper": "^1.0.1",
     "@codemirror/theme-one-dark": "^6.1.2",
