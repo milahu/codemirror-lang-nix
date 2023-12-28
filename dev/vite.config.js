@@ -41,4 +41,12 @@ export default {
       }
     },
   },
+  optimizeDeps: {
+    exclude: [
+      // no. the error is caused by pnpm. quickfix: use npm or yarn
+      // fix: Uncaught Error: Unrecognized extension value in extension set ([object Object]).
+      // https://github.com/codemirror/dev/issues/608
+      '@codemirror/state',
+    ],
+  },
 }
